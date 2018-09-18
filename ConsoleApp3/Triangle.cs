@@ -4,10 +4,16 @@ using System.Text;
 
 namespace ConsoleApp3
 {
+    /// <summary>
+    /// Represents class of Triangle.
+    /// </summary>
     class Triangle
     {
         public List<ColorSide> triangle { get; private set; }
-
+        /// <summary>
+        /// Creates a triangle.
+        /// </summary>
+        /// <param name="sides">Sides</param>
         public Triangle(ColorSide[] sides)
         {
             try
@@ -24,6 +30,11 @@ namespace ConsoleApp3
                 triangle.Add(sides[i]);
             }
         }
+
+        /// <summary>
+        /// Determineі the existence of a triangle on three sides.
+        /// </summary>
+        /// <param name="sides">Sides</param>
         private void Validate(ColorSide[] sides)
         {
 
@@ -35,6 +46,10 @@ namespace ConsoleApp3
             }
             
         }
+
+        /// <summary>
+        /// Prints data about colored triangles.
+        /// </summary>
         public void print()
         {
             for (int i = 0; i < this.triangle.Count; i++)
@@ -43,6 +58,11 @@ namespace ConsoleApp3
                 Console.WriteLine(this.triangle[i].getLength());
             }
         }
+
+        /// <summary>
+        /// Representing data about colored triangle in json block.
+        /// </summary>
+        /// <returns>jsonBlock</returns>
         public string GetJsonBlock()
         {
             string jsonBlock = "{";
@@ -54,6 +74,11 @@ namespace ConsoleApp3
             jsonBlock += "},";
             return jsonBlock;
         }
+
+        /// <summary>
+        /// Returns perimeter of the triangle.
+        /// </summary>
+        /// <returns>Perimeter</returns>
         public double GetPeritemer()
         {
             double perimeter = 0;

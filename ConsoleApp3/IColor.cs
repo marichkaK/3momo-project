@@ -4,8 +4,15 @@ using System.Text;
 
 namespace ConsoleApp3
 {
+    /// <summary>
+    /// Defines the get method for type Color objects.
+    /// </summary>
     interface IColor
     {
+        /// <summary>
+        /// Returns the name of color.
+        /// </summary>
+        /// <returns>Color</returns>
         Color getColor();
     }
 }
