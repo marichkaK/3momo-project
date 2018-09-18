@@ -10,15 +10,33 @@ namespace ConsoleApp3
 
         public Triangle(ColorSide[] sides)
         {
+            try
+            {
+                Validate(sides);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             triangle = new List<ColorSide>(3);
             for (int i = 0; i < sides.Length; i++)
             {
                 triangle.Add(sides[i]);
             }
         }
-          
+        private void Validate(ColorSide[] sides)
+        {
+
+            if (sides[0].getLength() + sides[1].getLength() <= sides[2].getLength() ||
+                sides[1].getLength() + sides[2].getLength() <= sides[0].getLength() ||
+                sides[2].getLength() + sides[0].getLength() <= sides[1].getLength())
+            {
+                throw new ArgumentException("One side of triangle are bigger than two others");
+            }
+            
+        }
         public void print()
-        {   
+        {
             for (int i = 0; i < this.triangle.Count; i++)
             {
                 Console.Write(this.triangle[i].getColor().getColor() + " ");

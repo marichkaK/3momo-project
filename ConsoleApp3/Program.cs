@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+
 namespace ConsoleApp3
 {
     class Program
@@ -48,7 +51,8 @@ namespace ConsoleApp3
             Dictionary<string, int> dictionary = new Dictionary<string, int>();
             foreach (var el in _triangles)
             {
-                if (el.triangle[0].getColor().getColor() == el.triangle[1].getColor().getColor() && el.triangle[0].getColor().getColor() == el.triangle[2].getColor().getColor())
+                if (el.triangle[0].getColor().getColor() == el.triangle[1].getColor().getColor() &&
+                    el.triangle[0].getColor().getColor() == el.triangle[2].getColor().getColor())
                 {
                     if (dictionary.ContainsKey(el.triangle[0].getColor().getColor()))
                     {
@@ -86,12 +90,7 @@ namespace ConsoleApp3
         }
         static void Main(string[] args)
         {
-         
-            
-           
-          
             Console.Read();
-
         }
     }
 }
