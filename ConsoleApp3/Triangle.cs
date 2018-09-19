@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    class Triangle
+    public class Triangle
     {
         public List<ColorSide> triangle { get; private set; }
 

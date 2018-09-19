@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    class Color
+    public class Color
     {
         public String color { get; set; }
 

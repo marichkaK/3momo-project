@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    class ColorSide :IColor
+    public class ColorSide :IColor
     {
         private Color color;
         private int length;
