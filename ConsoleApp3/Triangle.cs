@@ -7,7 +7,6 @@ namespace ConsoleApp3
     /// <summary>
     /// Represents class of Triangle.
     /// </summary>
-    class Triangle
     public class Triangle
     {
         public List<ColorSide> triangle { get; private set; }

@@ -7,7 +7,6 @@ namespace ConsoleApp3
     /// <summary>
     /// Represents class of colorside.
     /// </summary>
-    class ColorSide : IColor
     public class ColorSide :IColor
     {
         private Color color;

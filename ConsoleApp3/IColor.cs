@@ -7,7 +7,6 @@ namespace ConsoleApp3
     /// <summary>
     /// Defines the get method for type Color objects.
     /// </summary>
-    interface IColor
     public interface IColor
     {
         /// <summary>

@@ -7,7 +7,6 @@ namespace ConsoleApp3
     /// <summary>
     /// Represents the class for color.
     /// </summary>
-    class Color
     public class Color
     {
         public String color { get; set; }
