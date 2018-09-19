@@ -35,7 +35,7 @@ namespace ConsoleApp3
         /// Determineі the existence of a triangle on three sides.
         /// </summary>
         /// <param name="sides">Sides</param>
-        private void Validate(ColorSide[] sides)
+        public void Validate(ColorSide[] sides)
         {
 
             if (sides[0].getLength() + sides[1].getLength() <= sides[2].getLength() ||

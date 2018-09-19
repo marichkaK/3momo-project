@@ -8,7 +8,7 @@ namespace ConsoleApp3
 {
    public  class Program
     {
-        static List<Triangle> ReadData(string path)
+       public static List<Triangle> ReadData(string path)
         {
             using (StreamReader sr = new StreamReader(path))
             {
@@ -25,7 +25,7 @@ namespace ConsoleApp3
                 return triangles.ToList();
             }
         }
-        static List<Triangle> SortByPerimeter(List<Triangle> _triangles)
+         public   static List<Triangle> SortByPerimeter(List<Triangle> _triangles)
         {
             List<Triangle> triangles = _triangles;
             triangles = triangles.OrderBy(x => x.GetPeritemer()).ToList();
@@ -90,6 +90,20 @@ namespace ConsoleApp3
         }
         static void Main(string[] args)
         {
+            //<Task2>
+            string pathToTrianglesFile = "C:\\Users\\mkunyk\\source\\repos\\ConsoleApp3\\ConsoleApp3\\Tri2angles.txt";
+            string pathToSortedTrianglesFile = "C:\\Users\\mkunyk\\source\\repos\\ConsoleApp3\\ConsoleApp3\\SortedTriangles.txt";
+            List<Triangle> tr = ReadData(pathToTrianglesFile);
+            WriteSortedData(SortByPerimeter(tr), pathToSortedTrianglesFile);
+            //</Task2>
+            //<Task3>
+            Dictionary<string, int> trDictionary = GetTrianglesDictionary(tr);
+            Console.Write(trDictionary.ToString());
+            //</Task3>
+            //<Task4>
+            List<Triangle> trForRepaint = ReadData(pathToTrianglesFile);
+            trForRepaint = RePaintTriagles(trForRepaint);
+            //</Task4>
             Console.Read();
         }
     }

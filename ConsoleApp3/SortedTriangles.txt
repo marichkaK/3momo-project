@@ -1,1 +1,36 @@
-﻿
+{
+  "Triangles": [
+    {
+      "1sideLength": "2",
+      "1sideColor": "ConsoleApp3.Color",
+      "2sideLength": "4",
+      "2sideColor": "ConsoleApp3.Color",
+      "3sideLength": "5",
+      "3sideColor": "ConsoleApp3.Color"
+    },
+    {
+      "1sideLength": "4",
+      "1sideColor": "ConsoleApp3.Color",
+      "2sideLength": "10",
+      "2sideColor": "ConsoleApp3.Color",
+      "3sideLength": "8",
+      "3sideColor": "ConsoleApp3.Color"
+    },
+    {
+      "1sideLength": "8",
+      "1sideColor": "ConsoleApp3.Color",
+      "2sideLength": "20",
+      "2sideColor": "ConsoleApp3.Color",
+      "3sideLength": "16",
+      "3sideColor": "ConsoleApp3.Color"
+    },
+    {
+      "1sideLength": "16",
+      "1sideColor": "ConsoleApp3.Color",
+      "2sideLength": "40",
+      "2sideColor": "ConsoleApp3.Color",
+      "3sideLength": "32",
+      "3sideColor": "ConsoleApp3.Color"
+    }
+  ]
+}
