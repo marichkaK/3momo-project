@@ -40,9 +40,13 @@ namespace ConsoleApp3
 
             if (sides[0].getLength() + sides[1].getLength() <= sides[2].getLength() ||
                 sides[1].getLength() + sides[2].getLength() <= sides[0].getLength() ||
-                sides[2].getLength() + sides[0].getLength() <= sides[1].getLength())
+                sides[2].getLength() + sides[0].getLength() <= sides[1].getLength()) 
             {
                 throw new ArgumentException("One side of triangle are bigger than two others");
+            }
+            if (sides[0].getLength()==0 || sides[1].getLength()==0 || sides[2].getLength()==0)
+            {
+                throw new ArgumentException("Side lenght == 0");
             }
             
         }
